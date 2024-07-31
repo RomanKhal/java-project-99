@@ -1,6 +1,6 @@
 FROM gradle:8.5
 
-COPY app app
+COPY . /app
 
 RUN gradle installDist
 
