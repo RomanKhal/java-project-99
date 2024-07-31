@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY app app
 
-RUN ./gradlew --no-daemon installDist
+RUN gradle --no-daemon installDist
 
-CMD ./gradlew --no-daemon bootRun
+CMD gradle --no-daemon bootRun
