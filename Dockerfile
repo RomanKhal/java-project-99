@@ -1,9 +1,9 @@
-FROM gradle:8.5
+FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-COPY /app .
+COPY app app
 
-RUN ./gradlew installDist
+RUN ./gradlew --no-daemon installDist
 
-CMD ./gradlew bootRun
+CMD ./gradlew --no-daemon bootRun
