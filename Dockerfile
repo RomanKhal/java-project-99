@@ -1,7 +1,9 @@
 FROM gradle:8.5
 
-COPY . /app
+WORKDIR /app
+
+COPY /app .
 
 RUN gradle installDist
 
-RUN gradle bootRun
+CMD gradle bootRun
