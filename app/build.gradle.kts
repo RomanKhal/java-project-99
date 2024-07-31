@@ -16,6 +16,10 @@ java {
 	}
 }
 
+application {
+	mainClass.set("hexlet.code.app.AppApplication")
+}
+
 repositories {
 	mavenCentral()
 }
