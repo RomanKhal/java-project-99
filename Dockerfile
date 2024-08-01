@@ -1,9 +1,7 @@
-FROM eclipse-temurin:21-jdk
+FROM gradle:8.9.0-jdk21
 
-WORKDIR /app
+COPY app/ .
 
-COPY app app
+# RUN gradle --no-daemon installDist
 
-RUN gradle --no-daemon installDist
-
-CMD gradle --no-daemon bootRun
+CMD gradle bootRun
