@@ -4,6 +4,7 @@ COPY app/ .
 
 RUN gradle installDist
 
+EXPOSE 8080
+
 ENTRYPOINT ./build/install/app/bin/app
 
-EXPOSE 8080

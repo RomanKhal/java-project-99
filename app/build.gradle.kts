@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
 	application
 	jacoco
@@ -28,10 +31,31 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-devtools")
+	implementation("jakarta.persistence:jakarta.persistence-api:3.2.0")
+	implementation("com.zaxxer:HikariCP:5.1.0")
+	implementation("com.h2database:h2:2.2.224")
+	implementation("org.postgresql:postgresql:42.7.2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-tasks.withType<Test> {
+tasks.test {
 	useJUnitPlatform()
+	finalizedBy(tasks.jacocoTestReport)
+	testLogging {
+		displayGranularity = -1
+		exceptionFormat = TestExceptionFormat.FULL
+		events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+		showStackTraces = true
+		showCauses = true
+		showStandardStreams = true
+	}
+}
+
+tasks.jacocoTestReport {
+	reports {
+		xml.required = true
+		csv.required = false
+		html.required = false
+	}
 }
