@@ -1,0 +1,5 @@
+datasource:
+  url: ${JDBC_DATABASE_URL}
+#  username: ${USERNAME}
+#  password: ${PASSWORD}
+  driverClassName: org.postgresql.Driver

@@ -6,5 +6,5 @@ RUN gradle installDist
 
 EXPOSE 8080
 
-ENTRYPOINT ./build/install/app/bin/app
+ENTRYPOINT ./build/install/app/bin/app --spring.profiles.active=prod
 
