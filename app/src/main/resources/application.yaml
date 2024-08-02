@@ -1,4 +1,3 @@
-
 spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
@@ -9,27 +8,17 @@ spring:
         enabled: always
     hibernate:
       ddl-auto: update
-
-  config:
-    activate:
-      on-profile: dev
-
 ---
 spring:
-  config:
-    activate:
-      on-profile: prod
+  profiles: dev
   datasource:
     url: ${JDBC_DATABASE_URL}
-    #  username: ${USERNAME}
-    #  password: ${PASSWORD}
+    username: ${USERNAME}
+    password: ${PASSWORD}
     driverClassName: org.postgresql.Driver
 ---
-
 spring:
-  config:
-    activate:
-      on-profile: dev
+  profiles: dev
   datasource:
     url: jdbc:h2:mem:devDb
     username: sa
