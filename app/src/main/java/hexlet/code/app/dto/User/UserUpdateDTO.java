@@ -2,12 +2,13 @@ package hexlet.code.app.dto.User;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 @Getter
 @Setter
 public class UserUpdateDTO {
-    private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private JsonNullable<String> firstName;
+    private JsonNullable<String> lastName;
+    private JsonNullable<String> email;
+    private JsonNullable<String> password;
 }
