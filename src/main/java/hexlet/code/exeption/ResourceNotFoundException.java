@@ -1,4 +1,4 @@
-package hexlet.code.app.exeption;
+package hexlet.code.exeption;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

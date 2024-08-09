@@ -1,9 +1,9 @@
-package hexlet.code.app.Controller;
+package hexlet.code.Controller;
 
-import hexlet.code.app.Service.UserService;
-import hexlet.code.app.dto.User.UserCreateDTO;
-import hexlet.code.app.dto.User.UserDTO;
-import hexlet.code.app.dto.User.UserUpdateDTO;
+import hexlet.code.Service.UserService;
+import hexlet.code.dto.User.UserCreateDTO;
+import hexlet.code.dto.User.UserDTO;
+import hexlet.code.dto.User.UserUpdateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
-package hexlet.code.app.config;
+package hexlet.code.config;
 
-import hexlet.code.app.Model.User;
-import hexlet.code.app.Repository.UserRepository;
+import hexlet.code.Model.User;
+import hexlet.code.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

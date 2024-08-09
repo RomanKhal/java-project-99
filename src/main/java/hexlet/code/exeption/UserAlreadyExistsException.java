@@ -1,4 +1,4 @@
-package hexlet.code.app.exeption;
+package hexlet.code.exeption;
 
 public class UserAlreadyExistsException extends RuntimeException{
     public UserAlreadyExistsException() {

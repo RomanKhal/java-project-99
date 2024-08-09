@@ -1,11 +1,11 @@
-package hexlet.code.app;
+package hexlet.code;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import hexlet.code.app.Model.User;
-import hexlet.code.app.Repository.UserRepository;
-import hexlet.code.app.dto.User.UserCreateDTO;
-import hexlet.code.app.dto.User.UserUpdateDTO;
-import hexlet.code.app.mapper.UserMapper;
+import hexlet.code.Model.User;
+import hexlet.code.Repository.UserRepository;
+import hexlet.code.dto.User.UserCreateDTO;
+import hexlet.code.dto.User.UserUpdateDTO;
+import hexlet.code.mapper.UserMapper;
 import net.datafaker.Faker;
 import org.instancio.Instancio;
 import org.instancio.Select;

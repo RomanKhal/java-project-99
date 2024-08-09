@@ -1,6 +1,6 @@
-package hexlet.code.app.Repository;
+package hexlet.code.Repository;
 
-import hexlet.code.app.Model.User;
+import hexlet.code.Model.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 

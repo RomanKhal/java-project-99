@@ -1,12 +1,12 @@
-package hexlet.code.app.Service;
+package hexlet.code.Service;
 
-import hexlet.code.app.Repository.UserRepository;
-import hexlet.code.app.dto.User.UserCreateDTO;
-import hexlet.code.app.dto.User.UserDTO;
-import hexlet.code.app.dto.User.UserUpdateDTO;
-import hexlet.code.app.exeption.ResourceNotFoundException;
-import hexlet.code.app.exeption.UserAlreadyExistsException;
-import hexlet.code.app.mapper.UserMapper;
+import hexlet.code.Repository.UserRepository;
+import hexlet.code.dto.User.UserCreateDTO;
+import hexlet.code.dto.User.UserDTO;
+import hexlet.code.dto.User.UserUpdateDTO;
+import hexlet.code.exeption.ResourceNotFoundException;
+import hexlet.code.exeption.UserAlreadyExistsException;
+import hexlet.code.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
