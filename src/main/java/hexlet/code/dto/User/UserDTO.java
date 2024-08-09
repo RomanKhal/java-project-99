@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -12,5 +13,5 @@ public class UserDTO {
     private String firstName;
     private String lastName;
     private String email;
-    private Timestamp createdAt;
+    private LocalDate createdAt;
 }

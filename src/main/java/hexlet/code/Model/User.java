@@ -12,6 +12,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -42,8 +43,8 @@ public class User implements BaseEntity{
     private String password;
 
     @CreatedDate
-    private Timestamp createdAt;
+    private LocalDate createdAt;
 
     @LastModifiedDate
-    private Timestamp updatedAt;
+    private LocalDate updatedAt;
 }
